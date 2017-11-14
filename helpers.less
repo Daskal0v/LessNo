@@ -1,0 +1,56 @@
+//Mixin helper functions
+
+.clearfix {
+    &:before, &:after {
+	content: " ";
+	display: table;
+    }
+
+    &:after {
+	clear: both;
+    }
+}
+
+.list-reset {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.img-responsive {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/*
+*   auto | text | none | contain | all
+*/
+.user-select(@value){
+    -webkit-user-select: @value;  
+    -moz-user-select:    @value;     
+    -ms-user-select:     @value;     
+    user-select:         @value;  
+}
+
+.text-left-direction(){
+    direction: ltr;
+}
+
+.text-right-direction(){
+    direction: rtl;
+}
+
+.word-break(){
+    -ms-word-break: break-all;
+    word-break:     break-all;
+    /* Non standard for WebKit */
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens:    auto;
+    hyphens:         auto;
+}
+
+
+
